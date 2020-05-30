@@ -2,24 +2,39 @@
 
 <html>
     <head>
-
+        <title>To-do App</title>
+        <link rel="stylesheet" href="/styles/styles.css">
+        <link href="/images/favicon.png?v=1" rel="icon">
     </head>
     <body>
-        <h1>
-            <h1>Todos</h1>
-            <input id='search-text' type='text' placeholder="Search todo">
-            <label>
-                <input type='checkbox' id='hide-completed'> Hide completed
-            </label>
+
+        <div class="header">
+            <div class="container">
+                <h1 class="header__title">To-do App</h1>
+                <h2 class="header__subtitle">What do you need to do?</h2>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <div class="actions__container">
+                <input id='search-text' class="input" type='text' placeholder="Filter todo">
+                <label class="checkbox">
+                    <input type='checkbox' id='hide-completed'> Hide completed
+                </label>
+            </div>
+        </div>
+
+        <div class="container">
             <div id='todo'></div>
             <form id='todo-form'>
-                <input type="text" placeholder="Something to do" name='addTodo'>
-                <button>Add Todo</button>
+                <input type="text" class="input" placeholder="Something to do" name='addTodo'>
+                <button class="button">Add Todo</button>
             </form>
+        </div>
 
-            <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
-            <script src="todos-function.js"></script>
-            <script src="todos-app.js"></script>
+            <script src="/scripts/uuid4.js"></script>
+            <script src="/scripts/todos-function.js"></script>
+            <script src="/scripts/todos-app.js"></script>
         </h1>
     </body>
 </html>
